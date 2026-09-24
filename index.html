@@ -3,136 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Elvis Motari | Data Analytics Portfolio</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            background: #f5f7fa;
-            color: #222;
+            padding: 0;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
         header {
-            background: #1f2937;
+            background: linear-gradient(135deg, #172554, #2563eb);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 80px 20px;
         }
 
         header h1 {
+            font-size: 42px;
             margin-bottom: 10px;
-            font-size: 36px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 20px;
+            opacity: 0.95;
         }
 
+        .subtitle {
+            margin-top: 15px;
+            font-size: 16px;
+            opacity: 0.85;
+        }
+
+        /* MAIN CONTAINER */
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
-        .about {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+        /* SECTIONS */
+        section {
+            margin-bottom: 50px;
         }
 
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #172554;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .about p {
+            font-size: 17px;
+            color: #4b5563;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 9px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* PROJECTS */
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .project {
             background: white;
-            padding: 25px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
         }
 
         .project h3 {
-            margin-top: 0;
+            font-size: 21px;
+            margin-bottom: 15px;
+            color: #172554;
+        }
+
+        .project p {
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .tools {
+            font-size: 14px;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
         .project a {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
             background: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            padding: 11px 18px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: background 0.2s ease;
         }
 
+        .project a:hover {
+            background: #1d4ed8;
+        }
+
+        /* FOOTER */
         footer {
+            background: #172554;
+            color: white;
             text-align: center;
-            padding: 30px;
-            margin-top: 40px;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            opacity: 0.85;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 60px 20px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            section h2 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Elvis Motari</h1>
-    <p>Data Analytics Portfolio</p>
-</header>
+    <!-- HEADER -->
+    <header>
+        <h1>Elvis Motari</h1>
+        <p>Data Analytics Portfolio</p>
 
-<div class="container">
-
-    <section class="about">
-        <h2>About This Portfolio</h2>
-        <p>
-            A collection of healthcare, public health, and data analytics
-            projects using Python, Pandas, SQL, Excel, data visualization,
-            and machine learning.
-        </p>
-    </section>
-
-    <h2>My Projects</h2>
-
-    <div class="projects">
-
-        <div class="project">
-            <h3>🦠 Public Health Disease Surveillance</h3>
-            <p>
-                Analysis of public health surveillance data using Python,
-                Pandas, data cleaning, exploratory analysis and visualization.
-            </p>
-
-            <a href="https://www.kaggle.com/code/elvismotari/public-health-surveillance" target="_blank">
-                View Project
-            </a>
+        <div class="subtitle">
+            Healthcare • Public Health • Data Analytics
         </div>
+    </header>
 
 
-        <div class="project">
-            <h3>🏥 Patient Records Analysis</h3>
-            <p>
-                Analysis of patient records to explore demographics,
-                departments and healthcare-related patterns using Python.
-            </p>
+    <div class="container">
 
-            <a href="https://www.kaggle.com/code/elvismotari/patient-records-analysis-using-python" target="_blank">
-                View Project
-            </a>
-        </div>
+        <!-- ABOUT -->
+        <section>
+            <h2>About This Portfolio</h2>
+
+            <div class="about">
+                <p>
+                    This portfolio showcases practical data analytics projects
+                    focused on healthcare and public health. The projects
+                    demonstrate skills in data cleaning, analysis,
+                    visualization, and interpretation using Python, Pandas,
+                    SQL, Excel, and related data analytics technologies.
+                </p>
+            </div>
+        </section>
 
 
-        
+        <!-- SKILLS -->
+        <section>
+            <h2>Tools & Skills</h2>
+
+            <div class="skills">
+
+                <span class="skill">Python</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Excel</span>
+                <span class="skill">Data Cleaning</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Data Visualization</span>
+                <span class="skill">Healthcare Data</span>
+                <span class="skill">Public Health</span>
+
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section>
+
+            <h2>Featured Projects</h2>
+
+            <div class="projects">
+
+
+                <!-- DISEASE SURVEILLANCE -->
+                <div class="project">
+
+                    <h3>🦠 Public Health Disease Surveillance</h3>
+
+                    <p>
+                        Analysis of public health surveillance data to explore
+                        disease patterns, trends, and other important indicators
+                        using Python and data analysis techniques.
+                    </p>
+
+                    <div class="tools">
+                        Python • Pandas • Data Visualization
+                    </div>
+
+                    <a href="https://www.kaggle.com/code/elvismotari/public-health-surveillance"
+                       target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PATIENT RECORDS -->
+                <div class="project">
+
+                    <h3>🏥 Patient Records Analysis</h3>
+
+                    <p>
+                        Analysis of patient records to explore demographic
+                        characteristics, departments, and healthcare-related
+                        patterns using Python and Pandas.
+                    </p>
+
+                    <div class="tools">
+                        Python • Pandas • Healthcare Data
+                    </div>
+
+                    <a href="https://www.kaggle.com/code/elvismotari/patient-records-analysis-using-python"
+                       target="_blank">
+                        View Project
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
 
     </div>
 
-</div>
 
-<footer>
-    <p>© 2026 Elvis Motari | Data Analytics Portfolio</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Elvis Motari | Data Analytics Portfolio
+        </p>
+
+    </footer>
 
 </body>
-</html>
+    </html>
